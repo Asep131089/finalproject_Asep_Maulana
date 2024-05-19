@@ -1,0 +1,446 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  color: black;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+nav {
+  display: flex;
+  background-color: #1abc9c;
+  position: fixed;
+  z-index: 999;
+  /* position: fixed;
+  z-index: 999;
+  /* width: 100%; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+
+  width: 95%;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li a {
+  padding: 10px 20px;
+}
+
+nav .nama a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+nav .menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+nav .menu li {
+  list-style: none;
+  padding: 5px 2px;
+}
+nav .menu li:hover {
+  background-color: blue;
+  height: 20px;
+  border-radius: 8px;
+}
+nav .menu li:hover a {
+  color: red;
+}
+
+nav .menu .dropdown {
+  display: none;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  background-color: rgb(255, 187, 0);
+}
+
+nav .dropdown:hover {
+  display: block;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 300px;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.mobile-menu {
+  float: right;
+  display: none;
+  padding: 18px;
+  border: 1px solid;
+}
+.mobile-menu:hover {
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  width: 300px;
+  background-color: rgba(16, 80, 35, 0.9);
+  border: 1px solid red;
+  transition: 0.3s;
+  margin-top: 50px;
+  z-index: 9999;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: 0;
+}
+
+.sidebar ul li {
+  padding: 24px;
+  transition: 0.3s;
+  transition-property: background-color;
+
+  /* border: 1px solid; */
+}
+
+.sidebar ul li a:hover {
+  background-color: #00ff00;
+  color: red;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li .dropdown-sidebar {
+  display: none;
+}
+
+.sidebar ul li:hover .dropdown-sidebar {
+  display: block;
+}
+
+.banner {
+  padding: 150px 0;
+}
+
+.banner h5{
+  color:white;
+  font-size: 20px;
+  
+}
+
+.banner .username {
+  color: #27ae60;
+  font-weight: bolder;
+  font-size: 48px;
+}
+
+section {
+  padding: 2px;
+}
+
+.banner img {
+  width: 250px;
+  height: 250;
+  border-radius: 100%;
+  box-shadow: 0 6px 5px;
+  margin-bottom: 10px;
+  border-color: #f00b16;
+  border-style: solid;
+}
+
+.banner h2,
+.banner p,
+.banner span {
+  color: whitesmoke;
+}
+
+.banner h2 {
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 20px;
+}
+
+.banner-left {
+  padding-left: 32px;
+}
+
+section h3 {
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 20px;
+  position: relative;
+  /* font-family: "Pacifico", cursive; */
+}
+
+section h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  height: 1px;
+  background-color: #f00b16;
+  left: calc(50% - 60px);
+}
+
+section h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 40px;
+  height: 4px;
+  /* background-color: #1abc9c; */
+  left: calc(50% - 20px);
+}
+
+#about {
+  background-color: #f8f9f9;
+  padding-top: 72px;
+  /* padding-bottom: 2.4rem; */
+}
+#about .pAbout1, .pAbout2 {
+  text-align: justify;
+  /* membuat paragrap agak menjorok kedalam text-indent: 30px; */
+  text-indent: 30px;
+  /* jarak antar baris   line-height: px; */
+  line-height: px;
+  /* jarak dari bawah ke element margin-bottom: 15px;*/
+padding: 10px;
+}
+
+#about .pAbout1 {
+  margin-top: 60px;
+}
+
+
+
+#skills,
+#contact,
+#experiences,
+#Education,
+#interest,
+#award {
+  background-color: #f8f9f9;
+}
+
+#skills {
+  padding: 80px;
+}
+
+#skills .bar {
+  height: 30px;
+  background-color: #ec1010;
+  border: 1px solid #ddd;
+  /* margin  atas 30px kanan 0px  bawah 20px kiri 0px */
+  margin: 40px 0 20px 0;
+}
+
+.bar .nilai {
+  height: 30px;
+  background-color: #f39c12;
+  display: inline-block;
+  color: #27ae60;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.html {
+  width: 100%;
+}
+.css {
+  width: 90%;
+}
+.javascript {
+  width: 80%;
+}
+.nodejs {
+  width: 80%;
+}
+.react {
+  width: 75%;
+}
+
+.col-4 {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 60px;
+}
+
+.col-4 img {
+  width: 100%;
+}
+
+.col-4 a:hover img {
+  /* agar img saat disentuh berubah menjadi ngezoom / besar*/
+  transform: scale(1.2);
+}
+
+#portfolio {
+  background-color: #f8f9f9;
+  padding: 80px;
+}
+
+#contact {
+  padding: 80px;
+}
+
+.col-3 {
+  width: 33.33%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  padding: 50px 10px;
+}
+.col-3 h4 {
+  padding-bottom: 10px;
+  /* untuk tampilkan garis bawah dibawah alamat, email, tlp/hp */
+  /* border-bottom: 1px solid #ddd; */
+  margin-bottom: 15px;
+}
+
+#experiences {
+  padding: 80px;
+}
+
+.list-experience ul {
+  list-style: decimal;
+  text-align: left;
+}
+
+#Education {
+  padding: 80px;
+}
+
+#interest {
+  padding: 80px;
+  /* display: inline-block; */
+
+}
+
+
+.interested .content {
+  display: flex;
+}
+
+.interested .content .img {
+flex: 1 1 45rem;
+margin-top: 80px;
+
+}
+
+.interested .content .img img {
+width: 100%;
+height: 100%;
+
+
+}
+
+.interested .content .col-2 {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  text-indent: 3px;
+  margin-top: 80px;
+
+}
+
+.interested .content .col-2 p {
+  /* margin-bottom: 0.8rem; */
+  /* font-size: 1.3rem; */
+  font-weight:100;
+  line-height: 1.6;
+  padding: 5px;
+  
+}
+
+#interest .col-2 {
+  text-indent: 3rem;
+}
+
+
+
+
+
+
+#award {
+  padding: 80px;
+}
+
+footer {
+  background-color: #1abc9c;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  nav .menu {
+    display: none;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+.interested .content {
+  flex-wrap: wrap;
+}
+  
+}
+
+.foto6-8 {
+  height: 136px;
+}
+
+.img-rewards {
+  height: 180px;
+  width: auto;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+section.banner {
+  background-image: url("../img/background.jpeg"); /* Replace "path/to/your/image.jpg" with the actual path to your image */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-size: cover; /* Cover the entire area with the image */
+  background-position: center; /* Center the image horizontally and vertically */
+  height: 100vh; /* Set the height of the section to 100% of the viewport height */
+  display: flex; /* Use flexbox to center the content vertically */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
